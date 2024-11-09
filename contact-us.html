@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+      integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style></style>
+
+    <title>Contact Us</title>
+  </head>
+  <body class="relative">
+    <!-- Navbar -->
+    <div
+      id="navbar"
+      class="top-0 left-0 w-full z-30 transition-all duration-300 h-[8vh] min-h-[60px] bg-transparent z-20"
+    >
+      <div
+        id="navbar-content"
+        class="flex justify-between items-center h-full pr-8 bg-[#42A7DF] transition-all shadow-lg"
+      >
+        <!-- Logo -->
+        <div
+          class="flex items-center justify-center gap-x-2 py-4 px-6 pr-8 rounded-full"
+        >
+          <img src="./logo.png" alt="Logo" class="w-[220px]" />
+        </div>
+        <!-- Desktop Nav Links -->
+        <div class="flex items-center h-full gap-x-5 hidden lg:flex">
+          <div class="flex gap-x-4 items-center">
+            <div class="relative overflow-hidden" key="home">
+              <a
+                href="/index.html"
+                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] cursor-pointer hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
+              >
+                Home
+              </a>
+            </div>
+            <div class="relative overflow-hidden" key="Blog">
+              <a
+                href="/blog.html"
+                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
+              >
+                Blog
+              </a>
+            </div>
+
+            <div class="relative overflow-hidden" key="Our Companies">
+              <a
+                href="/our-companies.html"
+                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
+              >
+                Our Companies
+              </a>
+            </div>
+            <div class="relative overflow-hidden" key="About Us">
+              <a
+                href="/about-us.html"
+                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
+              >
+                About Us
+              </a>
+            </div>
+            <div class="relative overflow-hidden" key="Policy">
+              <a
+                href="/policy.html"
+                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
+              >
+                Policy
+              </a>
+            </div>
+            <div class="relative overflow-hidden" key="Contact">
+              <a
+                href="/contact-us.html"
+                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+          <!-- Sign In Button -->
+          <div
+            class="flex items-center gap-x-1 text-white hover:bg-white hover:text-[#42A7DF] px-2 py-2 rounded-lg transition-all duration-700 cursor-pointer"
+          >
+            <i class="fas fa-user text-2xl"></i>
+            <div>Sign In</div>
+          </div>
+          <!-- Add Listing Button -->
+          <div
+            class="flex items-center gap-x-1 border-2 border-white text-white px-2 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-[#42A7DF] transition-all duration-700"
+          >
+            <i class="fas fa-plus text-2xl"></i>
+            <div>Add Listing</div>
+          </div>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden pr-3 cursor-pointer" id="menu-btn">
+          <i class="fas fa-bars text-white text-2xl"></i>
+        </div>
+      </div>
+      <!-- Side Menu -->
+      <div
+        id="side-menu"
+        class="fixed top-[12vh] right-0 w-full h-fit bg-[#42A7DF] transition-transform transform translate-x-full z-40"
+      >
+        <div class="flex flex-col items-center p-4 py-8 text-white">
+          <!-- Side Menu Links -->
+        </div>
+      </div>
+    </div>
+    <!-- Blog Header Banner -->
+    <div class="w-full h-[30vh] overflow-hidden relative mb-5">
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"
+      ></div>
+      <img
+        src="./images/mountaincliff.jpg"
+        class="w-full h-[30vh] object-cover scale-150"
+        alt=""
+      />
+    </div>
+    <!-- contact Cards -->
+    <div class="w-full flex flex-col justify-center items-center gap-y-5 my-20">
+      <div class="flex justify-between gap-x-8 w-[50%]">
+        <div class="flex flex-col items-start w-1/2 gap-y-2">
+          <label for="first-name" class="">
+            First Name <span class="text-[red]">*</span>
+          </label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            class="w-full px-3 py-2 border-[1.5px] border-[lightgray]"
+            placeholder="Your first name here..."
+          />
+        </div>
+        <div class="flex flex-col items-start w-1/2 gap-y-2">
+          <label for="last-name" class="">
+            Last Name <span class="text-[red]">*</span>
+          </label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            class="w-full px-3 py-2 border-[1.5px] border-[lightgray]"
+            placeholder="Your last name here..."
+          />
+        </div>
+      </div>
+      <div class="flex flex-col items-start w-1/2">
+        <label for="email" class="">
+          Email <span class="text-[red]">*</span>
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="w-full px-3 py-2 border-[1.5px] border-[lightgray]"
+          placeholder="Your email here..."
+        />
+      </div>
+      <div class="flex flex-col items-start w-1/2">
+        <label for="email" class=""
+          >Comment or Message <span class="text-[red]">*</span>
+        </label>
+        <textarea
+          type="email"
+          name="email"
+          id="email"
+          class="w-full px-3 py-2 border-[1.5px] border-[lightgray] h-[120px]"
+          minlength="10"
+          placeholder="Your message here..."
+        ></textarea>
+      </div>
+      <div class="flex w-1/2 items-start my-3">
+        <button class="bg-[#42A7DF] text-white px-4 py-2 rounded-lg">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
+    >
+      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
+        Home
+      </div>
+      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
+        Blog
+      </div>
+      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
+        Our Companies
+      </div>
+      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
+        About Us
+      </div>
+      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
+        Policy
+      </div>
+      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
+        Contact
+      </div>
+    </div>
+    <div
+      class="flex items-center justify-center w-full bg-[#45505b] pt-12 flex gap-x-3 px-20 text-[lightgray] font-thin text-[1rem]"
+    >
+      <div class="">
+        Copyright © 2006 - 2020 BLUE DIAMOND GLOBAL GROUP Australia Pty Limited
+        (ABN: 62 497 349 953)
+      </div>
+      <div class="flex px-3 gap-x-2">
+        <div class="flex items-center gap-x-2">
+          <div
+            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
+          ></div>
+          2000 Sydney, Australia
+        </div>
+        <div class="flex items-center gap-x-2">
+          <div
+            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
+          ></div>
+          Tel 1800 008 555
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
+      Proudly World Guide by Domain & App Developers
+    </div>
+    <script>
+      // Blog data
+      blogDataForCards = [
+        {
+          name: "Lydia Kamau",
+          date: "03/09/2019",
+          title: "Ten fascinating sites to visit in Maldives",
+          bgImg: "./images/bgimg.png",
+          proImg: "./images/prof.jpeg",
+        },
+        {
+          name: "Lydia Kamau",
+          date: "03/09/2019",
+          title: "Ten fascinating sites to visit in Maldives",
+          bgImg: "./images/bgimg.png",
+          proImg: "./images/prof.jpeg",
+        },
+        {
+          name: "Lydia Kamau",
+          date: "03/09/2019",
+          title: "Ten fascinating sites to visit in Maldives",
+          bgImg: "./images/bgimg.png",
+          proImg: "./images/prof.jpeg",
+        },
+        {
+          name: "Lydia Kamau",
+          date: "03/09/2019",
+          title: "Ten fascinating sites to visit in Maldives",
+          bgImg: "./images/bgimg.png",
+          proImg: "./images/prof.jpeg",
+        },
+        {
+          name: "Lydia Kamau",
+          date: "03/09/2019",
+          title: "Ten fascinating sites to visit in Maldives",
+          bgImg: "./images/bgimg.png",
+          proImg: "./images/prof.jpeg",
+        },
+      ];
+
+      function createCountryCards() {
+        const container = document.getElementById("blogsCardsContainer");
+
+        blogDataForCards.forEach((country) => {
+          // Create card container
+          const card = document.createElement("div");
+          card.className =
+            "max-w-[360px] w-[360px] flex flex-col max-h-[55vh] min-h-[400px] items-center relative rounded-lg shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] relative";
+
+          // Create image element
+          const img = document.createElement("img");
+          img.src = country.bgImg;
+          img.alt = country.name;
+          img.className =
+            "min-h-[200px] h-[200px] w-full object-cover rounded-t-lg";
+
+          const proImg = document.createElement("img");
+          proImg.src = country.proImg;
+          proImg.alt = country.name;
+          proImg.className =
+            "h-[50px] rounded-full w-[50px] object-cover absolute top-[175px] left-1/2 -translate-x-1/2 border-2 border-white";
+
+          // Create type element
+          const typeDiv = document.createElement("div");
+          typeDiv.className = "text-black text-[1rem] font-thin pt-10 pb-1";
+          typeDiv.innerHTML = `blog`;
+          // Create title element
+          const titleDiv = document.createElement("div");
+          titleDiv.className =
+            "text-black text-[1.1rem] font-semibold px-8 text-center";
+          titleDiv.innerHTML = `${country.title}`;
+
+          // Create name element
+          const nameDiv = document.createElement("div");
+          nameDiv.className =
+            "text-black text-[.9rem] font-[200] pt-5 pb-2 flex items-center gap-x-2";
+          nameDiv.innerHTML = `<img src="./images/user.svg" class="w-5 h-5" />${country.name}`;
+
+          // Create date element
+          const dateDiv = document.createElement("div");
+          dateDiv.className =
+            "text-black text-[.9rem] font-[200] pt-5 pb-2 flex items-center gap-x-2";
+          dateDiv.innerHTML = `<img src="./images/calender.svg" class="w-5 h-5" />${country.date}`;
+          // name and date wrapper
+          const nameDateWrapper = document.createElement("div");
+          nameDateWrapper.className =
+            "flex items-center gap-x-8 px-8 justify-between";
+          nameDateWrapper.appendChild(nameDiv);
+          nameDateWrapper.appendChild(dateDiv);
+
+          // Append image and name to card
+          card.appendChild(img);
+          card.appendChild(proImg);
+          card.appendChild(typeDiv);
+          card.appendChild(titleDiv);
+          card.appendChild(nameDateWrapper);
+          // Append card to container
+          container.appendChild(card);
+        });
+      }
+
+      // Call function to create and display cards
+      createCountryCards();
+    </script>
+  </body>
+</html>
