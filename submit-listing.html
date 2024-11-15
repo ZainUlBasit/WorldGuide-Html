@@ -311,7 +311,202 @@
       </div>
     </div>
     <!-- Homer Banner -->
+    <script src="JS/bannerImage.js"></script>
 
+    <dic class="bg-gray-100 flex flex-col items-center justify-center">
+      <div class="w-[90%] max-w-[1000px] text-center">
+        <!-- Title -->
+        <h1 class="text-2xl font-semibold text-gray-800">Add your Listing</h1>
+        <!-- Subtitle -->
+        <p class="text-gray-500 mt-1">Add details about your listing</p>
+        <!-- Divider -->
+        <div class="w-8 h-1 bg-gray-400 mx-auto my-4"></div>
+
+        <!-- Notification Box -->
+        <div
+          class="flex items-center justify-start bg-gray-50 border border-gray-200 p-4 mt-6 rounded-lg text-gray-600"
+        >
+          <!-- Profile Icon Placeholder -->
+          <img
+            src="images/avatar.png"
+            class="w-10 h-10 bg-gray-300 rounded-full mr-3"
+          />
+          <!-- Notification Text -->
+          <div class="text-sm">
+            You are currently signed in as <strong>Zain</strong>,
+            <a href="#" class="text-blue-600 hover:underline">Sign out</a> or
+            continue below and start submission.
+          </div>
+        </div>
+      </div>
+      <div class="w-[85%] max-w-[900px] h-[1px] bg-gray-400 my-3"></div>
+      <div class="flex bg-gray-100 p-6 w-[90%] max-w-[1000px]">
+        <!-- Left section (form) -->
+        <div class="w-[80%] bg-white p-6 shadow-md rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700 mb-4">
+            PRIMARY LISTING DETAILS
+          </h2>
+
+          <!-- Listing Title -->
+          <div class="mb-4">
+            <label
+              class="text-sm font-semibold text-gray-600"
+              for="listingTitle"
+            >
+              Listing Title *</label
+            >
+            <input
+              type="text"
+              id="listingTitle"
+              placeholder="Staple & Fancy Hotel"
+              class="w-full mt-1 p-2 border border-gray-300 rounded"
+            />
+          </div>
+
+          <!-- Full Address -->
+          <div class="mb-4 w-full">
+            <label
+              class="text-sm font-semibold text-gray-600 flex items-center justify-between !w-full"
+              for="fullAddress"
+            >
+              <div class="" id="address-label">Full Address</div>
+              <div class="w-fit">
+                <button
+                  class="w-fit p-2 bg-blue-500 text-white font-semibold rounded-none"
+                  id="search-by-id"
+                >
+                  Search By Google
+                </button>
+                <button
+                  class="w-fit p-2 bg-gray-200 font-semibold text-gray-700 border-l border-gray-300"
+                  id="manual-coord"
+                >
+                  Manual Coordinates
+                </button>
+                <button
+                  class="w-fit p-2 bg-gray-200 font-semibold text-gray-700 border-l border-gray-300 rounded-r"
+                  id="drop-pin"
+                >
+                  Drop Pin
+                </button>
+              </div>
+            </label>
+            <div class="flex flex-col hidden" id="by-coord">
+              <input
+                type="text"
+                id="fullAddress"
+                placeholder="Start typing and find your place in google map"
+                class="w-full p-2 border border-gray-300 rounded-l"
+              />
+              <div class="flex gap-x-2">
+                <div class="flex flex-col w-1/2">
+                  <label
+                    class="text-sm font-semibold text-gray-600"
+                    for="Latitude"
+                  >
+                    Latitude
+                  </label>
+                  <input
+                    type="text"
+                    id="Latitude"
+                    placeholder="40.1231455"
+                    class="w-full mt-1 p-2 border border-gray-300 rounded"
+                  />
+                </div>
+                <div class="flex flex-col w-1/2">
+                  <label
+                    class="text-sm font-semibold text-gray-600"
+                    for="Longitude"
+                  >
+                    Longitude
+                  </label>
+                  <input
+                    type="text"
+                    id="Longitude"
+                    placeholder="-74.876545678"
+                    class="w-full mt-1 p-2 border border-gray-300 rounded"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center mt-1 w-full" id="by-address">
+              <input
+                type="text"
+                id="fullAddress"
+                placeholder="Start typing and find your place in google map"
+                class="w-full p-2 border border-gray-300 rounded-l"
+              />
+            </div>
+          </div>
+
+          <!-- City -->
+          <div class="mb-4">
+            <label class="text-sm font-semibold text-gray-600" for="city"
+              >City</label
+            >
+            <select
+              id="city"
+              class="w-full mt-1 p-2 border border-gray-300 rounded text-gray-600"
+            >
+              <option>Select Your Listing Region</option>
+            </select>
+          </div>
+
+          <!-- Website -->
+          <div class="mb-4">
+            <label class="text-sm font-semibold text-gray-600" for="website"
+              >Website</label
+            >
+            <input
+              type="text"
+              id="website"
+              placeholder="http://"
+              class="w-full mt-1 p-2 border border-gray-300 rounded"
+            />
+          </div>
+
+          <!-- Phone -->
+          <div class="mb-4">
+            <label class="text-sm font-semibold text-gray-600" for="phone"
+              >Phone</label
+            >
+            <input
+              type="text"
+              id="phone"
+              placeholder="111-111-1234"
+              class="w-full mt-1 p-2 border border-gray-300 rounded"
+            />
+          </div>
+
+          <!-- Whatsapp -->
+          <div>
+            <label class="text-sm font-semibold text-gray-600" for="whatsapp"
+              >Whatsapp</label
+            >
+            <input
+              type="text"
+              id="whatsapp"
+              placeholder="111-111-1234"
+              class="w-full mt-1 p-2 border border-gray-300 rounded"
+            />
+          </div>
+        </div>
+
+        <!-- Right section (info card) -->
+        <div class="w-1/3 ml-6 bg-white p-6 shadow-md rounded-lg h-fit">
+          <h2 class="text-lg font-semibold text-gray-700">Title</h2>
+          <p class="text-sm text-gray-600 mt-2">
+            Enter your complete business name for when people who know your
+            business by name and are looking you up.
+          </p>
+          <img
+            src="images/titleimage.png"
+            alt="Example image"
+            class="mt-4 w-full rounded-md border border-gray-300"
+          />
+        </div>
+      </div>
+    </dic>
     <!-- Footer -->
     <div
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
