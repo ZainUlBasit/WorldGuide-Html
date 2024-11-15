@@ -20,104 +20,9 @@
   </head>
   <body class="relative">
     <!-- Navbar -->
-    <div
-      id="navbar"
-      class="top-0 left-0 w-full z-30 transition-all duration-300 h-[8vh] min-h-[60px] bg-transparent z-20"
-    >
-      <div
-        id="navbar-content"
-        class="flex justify-between items-center h-full pr-8 bg-[#42A7DF] transition-all shadow-lg"
-      >
-        <!-- Logo -->
-        <div
-          class="flex items-center justify-center gap-x-2 py-4 px-6 pr-8 rounded-full"
-        >
-          <img src="./logo.png" alt="Logo" class="w-[220px]" />
-        </div>
-        <!-- Desktop Nav Links -->
-        <div class="flex items-center h-full gap-x-5 hidden lg:flex">
-          <div class="flex gap-x-4 items-center">
-            <div class="relative overflow-hidden" key="home">
-              <a
-                href="/index.html"
-                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] cursor-pointer hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
-              >
-                Home
-              </a>
-            </div>
-            <div class="relative overflow-hidden" key="Blog">
-              <a
-                href="/blog.html"
-                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
-              >
-                Blog
-              </a>
-            </div>
-
-            <div class="relative overflow-hidden" key="Our Companies">
-              <a
-                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
-              >
-                Our Companies
-              </a>
-            </div>
-            <div class="relative overflow-hidden" key="About Us">
-              <a
-                href="/about-us.html"
-                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
-              >
-                About Us
-              </a>
-            </div>
-            <div class="relative overflow-hidden" key="Policy">
-              <a
-                href="/policy.html"
-                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
-              >
-                Policy
-              </a>
-            </div>
-            <div class="relative overflow-hidden" key="Contact">
-              <a
-                href="/contact-us.html"
-                class="text-[16px] font-poppins font-[300] maxWeb1:text-[25px] maxWeb2:text-[30px] maxWeb3:text-[35px] maxWeb4:text-[40px] hover:text-sec transition-all ease-in-out duration-500 text-white cursor-pointer"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-          <!-- Sign In Button -->
-          <div
-            class="flex items-center gap-x-1 text-white hover:bg-white hover:text-[#42A7DF] px-2 py-2 rounded-lg transition-all duration-700 cursor-pointer"
-          >
-            <i class="fas fa-user text-2xl"></i>
-            <div>Sign In</div>
-          </div>
-          <!-- Add Listing Button -->
-          <div
-            class="flex items-center gap-x-1 border-2 border-white text-white px-2 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-[#42A7DF] transition-all duration-700"
-          >
-            <i class="fas fa-plus text-2xl"></i>
-            <div>Add Listing</div>
-          </div>
-        </div>
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden pr-3 cursor-pointer" id="menu-btn">
-          <i class="fas fa-bars text-white text-2xl"></i>
-        </div>
-      </div>
-      <!-- Side Menu -->
-      <div
-        id="side-menu"
-        class="fixed top-[12vh] right-0 w-full h-fit bg-[#42A7DF] transition-transform transform translate-x-full z-40"
-      >
-        <div class="flex flex-col items-center p-4 py-8 text-white">
-          <!-- Side Menu Links -->
-        </div>
-      </div>
-    </div>
+    <script src="JS/navbar.js"></script>
     <!-- Companies Header Banner -->
-    <script src="/bannerImage.js"></script>
+    <script src="JS/bannerImage.js"></script>
 
     <!-- Companies Description -->
 
@@ -178,48 +83,11 @@
     <!-- Footer -->
     <div
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
-    >
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Home
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Blog
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Our Companies
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        About Us
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Policy
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Contact
-      </div>
-    </div>
-    <div
-      class="flex items-center justify-center w-full bg-[#45505b] pt-12 flex gap-x-3 px-20 text-[lightgray] font-thin text-[1rem]"
-    >
-      <div class="">
-        Copyright © 2006 - 2020 BLUE DIAMOND GLOBAL GROUP Australia Pty Limited
-        (ABN: 62 497 349 953)
-      </div>
-      <div class="flex px-3 gap-x-2">
-        <div class="flex items-center gap-x-2">
-          <div
-            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
-          ></div>
-          2000 Sydney, Australia
-        </div>
-        <div class="flex items-center gap-x-2">
-          <div
-            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
-          ></div>
-          Tel 1800 008 555
-        </div>
-      </div>
-    </div>
+      id="footer-navs"
+    ></div>
+    <div id="footer-last"></div>
+    <script src="JS/main.js"></script>
+
     <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
       Proudly World Guide by Domain & App Developers
     </div>

@@ -58,9 +58,9 @@
   </head>
   <body class="relative">
     <!-- Navbar -->
-    <script src="navbar.js"></script>
+    <script src="JS/navbar.js"></script>
     <!-- Blog Header Banner -->
-    <script src="/bannerImage.js"></script>
+    <script src="JS/bannerImage.js"></script>
     <!-- Blog Cards -->
     <div class="w-full flex justify-center items-center">
       <div
@@ -71,167 +71,156 @@
 
     <div
       class="w-full flex justify-center items-center text-center text-[1.2rem] font-semibold mt-20"
+      id="login-block"
     >
       You Welcome To Write Your Blog
     </div>
     <div
       class="w-full flex justify-center items-center text-center text-sm font-[300] gap-x-1 mb-20"
+      id="login-block2"
     >
       Please <a href="/sign-in.html" class="text-blue-500">log in</a> to submit
       content!
     </div>
+    <div class="flex w-full items-center justify-center">
+      <div class="flex flex-col gap-y-2 py-20" id="Write-Blog">
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Your Email"
+          class="px-2 py-1"
+        />
+        <label for="title">Post Title</label>
+        <input
+          type="text"
+          id="title"
+          placeholder="Post Title"
+          class="px-2 py-1"
+        />
+        <label for="question">1 + 1 = </label>
+        <input
+          type="text"
+          id="question"
+          placeholder="Anti Spam Question"
+          class="px-2 py-1"
+        />
+        <label for="user-submitted-category">Post Category</label>
+        <select
+          id="user-submitted-category"
+          data-required="true"
+          required=""
+          class="border-[1px] border-black py-2 px-1"
+          name="user-submitted-category[]"
+        >
+          <option value="" selected="true" disabled="">
+            Please select a category..
+          </option>
+          <option value="417">Australia</option>
+          <option value="420">Beijing</option>
+          <option value="421">Berlin</option>
+          <option value="422">Bern</option>
+          <option value="256">Blog</option>
+          <option value="423">Brisbane</option>
+          <option value="424">Cairns</option>
+          <option value="425">Canada</option>
+          <option value="426">Canberra</option>
+          <option value="427">China</option>
+          <option value="428">Christchurch</option>
+          <option value="429">Darwin</option>
+          <option value="430">Dunedin</option>
+          <option value="431">France</option>
+          <option value="432">Geelong</option>
+          <option value="433">Germany</option>
+          <option value="434">Gisborne</option>
+          <option value="435">Gold Coast</option>
+          <option value="436">Hamilton</option>
+          <option value="437">Hobart</option>
+          <option value="438">Invercargill</option>
+          <option value="439">London</option>
+          <option value="440">Melbourne</option>
+          <option value="441">Moscow</option>
+          <option value="442">Napier Hastings</option>
+          <option value="443">Nelson</option>
+          <option value="418">New Zealand</option>
+          <option value="444">Newcastle</option>
+          <option value="445">North Korea</option>
+          <option value="446">Other</option>
+          <option value="447">Ottawa</option>
+          <option value="448">Palmerston North</option>
+          <option value="449">Paris</option>
+          <option value="450">Perth</option>
+          <option value="451">Rotorua</option>
+          <option value="452">Russia</option>
+          <option value="460">Select Washington</option>
+          <option value="453">South Korea</option>
+          <option value="454">Sunshine Coast</option>
+          <option value="455">Switzerland</option>
+          <option value="416">Sydney</option>
+          <option value="456">Tauranga</option>
+          <option value="457">Toowoomba</option>
+          <option value="458">Townsville</option>
+          <option value="459">United Kingdom</option>
+          <option value="461">Wellington</option>
+          <option value="462">Whanganui</option>
+          <option value="463">Whangarei</option>
+          <option value="464">Wollongong</option>
+        </select>
+
+        <label for="user-submitted-content">Post Content</label>
+        <textarea
+          class="h-[10vh] border-[1px] border-black"
+          id="user-submitted-content"
+          placeholder="Post Content"
+        ></textarea>
+        <label for="user-submitted-content" class="flex flex-col">
+          <div class="">Upload an Image</div>
+          <div class="">Please select your image(s) to upload.</div>
+        </label>
+        <div class="flex flex-col gap-y-2 py-2" id="files-blog">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const input = document.createElement("input");
+              input.type = "file";
+              input.accept = "image/*";
+              document.getElementById("files-blog").appendChild(input);
+            });
+          </script>
+        </div>
+        <div class="" id="file-btn"></div>
+        <div class="" id="submit-btn"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const button = document.createElement("button");
+          button.textContent = "Add another image";
+          button.className = "text-blue-700";
+          button.onclick = function () {
+            const input = document.createElement("input");
+            input.type = "file";
+            input.accept = "image/*";
+            document.getElementById("files-blog").appendChild(input);
+          };
+          document.getElementById("file-btn").appendChild(button);
+          const sbutton = document.createElement("button");
+          button.textContent = "Submit Post";
+          button.className =
+            "bg-[#EFEFEF] text-[#7f7f7f] p-1 px-2 cursor-pointer text-sm";
+          document.getElementById("submit-btn").appendChild(button);
+        });
+      </script>
+    </div>
 
     <!-- Footer -->
     <div
-      class="flex items-center justify-center w-full bg-[#363f48] py-12 gap-x-5 text-white mt-8 footer-links"
-    >
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Home
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Blog
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Our Companies
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        About Us
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Policy
-      </div>
-      <div class="cursor-pointer hover:border-b-2 hover:border-b-white">
-        Contact
-      </div>
-    </div>
-    <div
-      class="flex items-center justify-center w-full bg-[#45505b] pt-12 flex gap-x-3 px-20 text-[lightgray] font-thin text-[1rem] footer-copyright"
-    >
-      <div class="">
-        Copyright © 2006 - 2020 BLUE DIAMOND GLOBAL GROUP Australia Pty Limited
-        (ABN: 62 497 349 953)
-      </div>
-      <div class="flex px-3 gap-x-2 footer-copyright-links">
-        <div class="flex items-center gap-x-2">
-          <div
-            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
-          ></div>
-          2000 Sydney, Australia
-        </div>
-        <div class="flex items-center gap-x-2">
-          <div
-            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
-          ></div>
-          Tel 1800 008 555
-        </div>
-      </div>
-    </div>
+      class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
+      id="footer-navs"
+    ></div>
+    <div id="footer-last"></div>
+    <script src="JS/main.js"></script>
     <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
       Proudly World Guide by Domain & App Developers
     </div>
-    <script>
-      // Blog data
-      blogDataForCards = [
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-      ];
-
-      function createCountryCards() {
-        const container = document.getElementById("blogsCardsContainer");
-
-        blogDataForCards.forEach((country) => {
-          // Create card container
-          const card = document.createElement("div");
-          card.className =
-            "max-w-[360px] w-[360px] flex flex-col max-h-[55vh] min-h-[400px] items-center relative rounded-lg shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] relative blog-card";
-
-          // Create image element
-          const img = document.createElement("img");
-          img.src = country.bgImg;
-          img.alt = country.name;
-          img.className =
-            "min-h-[200px] h-[200px] w-full object-cover rounded-t-lg";
-
-          const proImg = document.createElement("img");
-          proImg.src = country.proImg;
-          proImg.alt = country.name;
-          proImg.className =
-            "h-[50px] rounded-full w-[50px] object-cover absolute top-[175px] left-1/2 -translate-x-1/2 border-2 border-white";
-
-          // Create type element
-          const typeDiv = document.createElement("div");
-          typeDiv.className = "text-black text-[1rem] font-thin pt-10 pb-1";
-          typeDiv.innerHTML = `blog`;
-          // Create title element
-          const titleDiv = document.createElement("div");
-          titleDiv.className =
-            "text-black text-[1.1rem] font-semibold px-8 text-center";
-          titleDiv.innerHTML = `${country.title}`;
-
-          // Create name element
-          const nameDiv = document.createElement("div");
-          nameDiv.className =
-            "text-black text-[.9rem] font-[200] pt-5 pb-2 flex items-center gap-x-2";
-          nameDiv.innerHTML = `<img src="./images/user.svg" class="w-5 h-5" />${country.name}`;
-
-          // Create date element
-          const dateDiv = document.createElement("div");
-          dateDiv.className =
-            "text-black text-[.9rem] font-[200] pt-5 pb-2 flex items-center gap-x-2";
-          dateDiv.innerHTML = `<img src="./images/calender.svg" class="w-5 h-5" />${country.date}`;
-          // name and date wrapper
-          const nameDateWrapper = document.createElement("div");
-          nameDateWrapper.className =
-            "flex items-center gap-x-8 px-8 justify-between";
-          nameDateWrapper.appendChild(nameDiv);
-          nameDateWrapper.appendChild(dateDiv);
-
-          // Append image and name to card
-          card.appendChild(img);
-          card.appendChild(proImg);
-          card.appendChild(typeDiv);
-          card.appendChild(titleDiv);
-          card.appendChild(nameDateWrapper);
-          // Append card to container
-          container.appendChild(card);
-        });
-      }
-
-      // Call function to create and display cards
-      createCountryCards();
-    </script>
+    <script src="JS/Blog.js"></script>
   </body>
 </html>

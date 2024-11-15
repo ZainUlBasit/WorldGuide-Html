@@ -230,6 +230,7 @@
           </div>
           <button
             class="px-8 py-2 rounded-lg bg-gray-500 text-white hover:text-black hover:bg-blue-400 text-xl font-thin transition-all ease-in-out duration-700"
+            id="login-btn"
           >
             Login
           </button>
@@ -277,8 +278,12 @@
 
     <script src="/country_guide.js"></script>
     <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
+      const loginBtn = document.getElementById("login-btn");
+
+      loginBtn.addEventListener("click", function () {
+        localStorage.setItem("login", true);
+        window.location.href = "./blog.html";
+      });
 
       // Get the button that opens the modal
       var btn = document.getElementById("loginBtn");
@@ -322,6 +327,7 @@
           tooltip.style.opacity = 0;
         });
       });
+
       const btnData = [
         { title: "Immigration", img: "./images/immigration-law.png" },
         { title: "Real Estate", img: "./images/property.png" },
