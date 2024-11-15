@@ -1,18 +1,20 @@
-const SearchByIdBtn = document.getElementById("search-by-id");
-const ManualCoordBtn = document.getElementById("manual-coord");
-
-SearchByIdBtn.addEventListener("click", function () {
-  SearchByIdBtn.classList.replace("bg-gray-200", "bg-blue-500");
-  SearchByIdBtn.classList.replace("!text-black", "!text-white");
-
-  ManualCoordBtn.classList.replace("bg-blue-500", "bg-gray-200");
-  ManualCoordBtn.classList.replace("!text-white", "!text-black");
-});
-
-ManualCoordBtn.addEventListener("click", function () {
-  ManualCoordBtn.classList.replace("bg-gray-200", "bg-blue-500");
-  ManualCoordBtn.classList.replace("text-black", "text-white");
-
-  SearchByIdBtn.classList.replace("bg-blue-500", "bg-gray-200");
-  SearchByIdBtn.classList.replace("text-black", "text-[red]");
+const buttons = document.querySelectorAll("#buttonAd");
+buttons.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    buttons.forEach((b) => {
+      b.classList.remove("bg-blue-500", "text-white");
+      b.classList.add("bg-gray-200", "text-gray-700");
+    });
+    this.classList.remove("bg-gray-200", "text-gray-700");
+    this.classList.add("bg-blue-500", "text-white");
+    if (index === 0) {
+      document.getElementById("address-label").innerHTML = "Full Address";
+      document.getElementById("by-coord").classList.add("hidden");
+      document.getElementById("by-address").classList.remove("hidden");
+    } else if (index === 1) {
+      document.getElementById("address-label").innerHTML = "Add Custom Address";
+      document.getElementById("by-coord").classList.remove("hidden");
+      document.getElementById("by-address").classList.add("hidden");
+    }
+  });
 });
