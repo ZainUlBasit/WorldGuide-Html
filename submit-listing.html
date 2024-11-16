@@ -342,7 +342,7 @@
       <div class="w-[85%] max-w-[900px] h-[1px] bg-gray-400 my-3"></div>
       <div class="flex bg-gray-100 py-6 w-[90%] max-w-[1000px]">
         <!-- Left section (form) -->
-        <div class="w-[80%]">
+        <div class="w-[80%] overflow-y-auto h-[90vh]">
           <div class="w-full bg-white p-6 shadow-md rounded-lg">
             <h2 class="text-lg font-semibold text-gray-700 mb-4">
               PRIMARY LISTING DETAILS
@@ -511,18 +511,15 @@
           </div>
 
           <div class="bg-white shadow-md rounded px-8 py-6 mb-4">
-            <h3 class="text-lg font-bold mb-4">PRICE DETAILS 
-              
-            </h3>
+            <h3 class="text-lg font-bold mb-4">PRICE DETAILS</h3>
             <div class="flex mb-4">
               <div class="flex-1 mr-4">
                 <label
                   for="price_details"
                   class="block text-gray-700 text-sm font-bold mb-2"
-                  >
-                  Price Details
-                  </label
                 >
+                  Price Details
+                </label>
                 <input
                   type="text"
                   id="price_details"
@@ -547,10 +544,9 @@
                 <label
                   for="price_to"
                   class="block text-gray-700 text-sm font-bold mb-2"
-                  >
-                  Price To
-                  </label
                 >
+                  Price To
+                </label>
                 <input
                   type="text"
                   id="price_to"
@@ -565,22 +561,334 @@
             <h3 class="text-lg font-bold mb-4">Business Hours</h3>
 
             <div class="flex flex-col">
-              <div class="flex w-full justify-between border-b-[1px] border-gray-200 py-3">
-                <div class="w-[200px]">Monday</div>
+              <div
+                class="flex w-full justify-between border-b-[1px] border-gray-200 py-3"
+              >
+                <div class="w-[90px]">Monday</div>
                 <div class="">4:00 - 7:00</div>
-                <i class="fa-solid fa-circle-xmark text-xl text-[#E1ADA9]"></i>
+                <i class="fa-solid fa-circle-xmark text-x l text-[#E1ADA9]"></i>
               </div>
-              
+              <div
+                class="flex w-full justify-between border-b-[1px] border-gray-200 py-3"
+              >
+                <div class="w-[90px]">Saturday</div>
+                <div class="">4:00 - 7:00</div>
+                <i class="fa-solid fa-circle-xmark text-x l text-[#E1ADA9]"></i>
+              </div>
             </div>
-
+            <div class="w-full flex justify-between items-center py-2">
+              <div class="flex gap-x-3 items-center">
+                <div class="">
+                  <select
+                    class="form-select block w-full mt-1 border-[1px] border-gray-300 px-1"
+                  >
+                    <option value="">Select Day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                  </select>
+                </div>
+                <div class="">
+                  <select
+                    class="form-select block w-full mt-1 border-[1px] border-gray-300 px-1"
+                  >
+                    <option value="">Select Time</option>
+                    <option value="12:00 AM">12:00 AM</option>
+                    <option value="12:30 AM">12:30 AM</option>
+                    <option value="1:00 AM">1:00 AM</option>
+                    <option value="1:30 AM">1:30 AM</option>
+                    <option value="2:00 AM">2:00 AM</option>
+                    <option value="2:30 AM">2:30 AM</option>
+                    <option value="3:00 AM">3:00 AM</option>
+                    <option value="3:30 AM">3:30 AM</option>
+                    <option value="4:00 AM">4:00 AM</option>
+                    <option value="4:30 AM">4:30 AM</option>
+                    <option value="5:00 AM">5:00 AM</option>
+                    <option value="5:30 AM">5:30 AM</option>
+                    <option value="6:00 AM">6:00 AM</option>
+                    <option value="6:30 AM">6:30 AM</option>
+                    <option value="7:00 AM">7:00 AM</option>
+                    <option value="7:30 AM">7:30 AM</option>
+                    <option value="8:00 AM">8:00 AM</option>
+                    <option value="8:30 AM">8:30 AM</option>
+                    <option value="9:00 AM">9:00 AM</option>
+                    <option value="9:30 AM">9:30 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="1:30 PM">1:30 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="2:30 PM">2:30 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                    <option value="3:30 PM">3:30 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                    <option value="4:30 PM">4:30 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="5:30 PM">5:30 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                    <option value="6:30 PM">6:30 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="7:30 PM">7:30 PM</option>
+                    <option value="8:00 PM">8:00 PM</option>
+                    <option value="8:30 PM">8:30 PM</option>
+                    <option value="9:00 PM">9:00 PM</option>
+                    <option value="9:30 PM">9:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                    <option value="10:30 PM">10:30 PM</option>
+                    <option value="11:00 PM">11:00 PM</option>
+                    <option value="11:30 PM">11:30 PM</option>
+                  </select>
+                </div>
+                <div class="">
+                  <select
+                    class="form-select block w-full mt-1 border-[1px] border-gray-300 px-1"
+                  >
+                    <option value="">Select Time</option>
+                    <option value="12:00 AM">12:00 AM</option>
+                    <option value="12:30 AM">12:30 AM</option>
+                    <option value="1:00 AM">1:00 AM</option>
+                    <option value="1:30 AM">1:30 AM</option>
+                    <option value="2:00 AM">2:00 AM</option>
+                    <option value="2:30 AM">2:30 AM</option>
+                    <option value="3:00 AM">3:00 AM</option>
+                    <option value="3:30 AM">3:30 AM</option>
+                    <option value="4:00 AM">4:00 AM</option>
+                    <option value="4:30 AM">4:30 AM</option>
+                    <option value="5:00 AM">5:00 AM</option>
+                    <option value="5:30 AM">5:30 AM</option>
+                    <option value="6:00 AM">6:00 AM</option>
+                    <option value="6:30 AM">6:30 AM</option>
+                    <option value="7:00 AM">7:00 AM</option>
+                    <option value="7:30 AM">7:30 AM</option>
+                    <option value="8:00 AM">8:00 AM</option>
+                    <option value="8:30 AM">8:30 AM</option>
+                    <option value="9:00 AM">9:00 AM</option>
+                    <option value="9:30 AM">9:30 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="1:30 PM">1:30 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="2:30 PM">2:30 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                    <option value="3:30 PM">3:30 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                    <option value="4:30 PM">4:30 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="5:30 PM">5:30 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                    <option value="6:30 PM">6:30 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="7:30 PM">7:30 PM</option>
+                    <option value="8:00 PM">8:00 PM</option>
+                    <option value="8:30 PM">8:30 PM</option>
+                    <option value="9:00 PM">9:00 PM</option>
+                    <option value="9:30 PM">9:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                    <option value="10:30 PM">10:30 PM</option>
+                    <option value="11:00 PM">11:00 PM</option>
+                    <option value="11:30 PM">11:30 PM</option>
+                  </select>
+                </div>
+                <div class="form-group flex items-center gap-x-1">
+                  <input
+                    type="checkbox"
+                    id="twenty-four-hours-service"
+                    name="twenty-four-hours-service"
+                  />
+                  <label for="twenty-four-hours-service"
+                    >24 Hours Service</label
+                  >
+                </div>
+              </div>
+              <button
+                id="add-day"
+                class="text-[.9rem] w-6 h-6 bg-blue-600 p-1 rounded-lg flex justify-center items-center text-white"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
           </div>
 
+          <div class="bg-white shadow-md rounded px-8 py-6 mb-4">
+            <h3 class="text-lg font-bold mb-4">Social Media</h3>
+            <div class="flex justify-between items-center">
+              <h2 class="whitespace-nowrap text-[1rem] font-semibold">
+                Social Media
+              </h2>
+              <select
+                class="form-select block w-fit border border-gray-300 px-1 py-2 rounded leading-tight shadow outline-none"
+              >
+                <option value="">Please Select</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Twitter">Twitter</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="YouTube">YouTube</option>
+              </select>
+              <input
+                type="text"
+                id="social-media-link"
+                placeholder="Enter social media link"
+                class="shadow appearance-none border rounded w-full max-w-[300px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="w-full flex justify-end py-4">
+              <button id="add-faq" class="flex items-center gap-x-1">
+                <div
+                  class="text-[.9rem] w-6 h-6 bg-blue-600 p-1 rounded-lg flex justify-center items-center text-white"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="text-blue-600">Add Link</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-white shadow-md rounded px-8 py-6 mb-4">
+            <h3 class="text-lg font-bold mb-4">Frequently Asked Questions</h3>
+
+            <div class="flex flex-col gap-4" id="faq-questions">
+              <div class="flex gap-4">
+                <label
+                  for="faq-question"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  >FAQ</label
+                >
+                <div class="flex flex-col gap-y-2 w-full pl-5 justify-end">
+                  <input
+                    type="text"
+                    id="faq-question"
+                    placeholder="Enter FAQ question"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                  <textarea
+                    id="faq-answer"
+                    placeholder="Enter FAQ answer"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline min-h-[10vh]"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-end py-4">
+              <button id="add-faq" class="flex items-center gap-x-1">
+                <div
+                  class="text-[.9rem] w-6 h-6 bg-blue-600 p-1 rounded-lg flex justify-center items-center text-white"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="text-blue-600">Add FAQ</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-white shadow-md rounded px-8 py-6 mb-4">
+            <h3 class="text-lg font-bold mb-4">More Info</h3>
+            <h3 class="text-lg font-bold mb-4">Description</h3>
+            <form action="" method="post">
+              <textarea name="textarea" id="default"></textarea>
+            </form>
+            <script src="tinymce/tinymce.min.js"></script>
+            <script src="JS/rt_script.js"></script>
+          </div>
+
+          <div class="bg-white shadow-md rounded px-8 py-6 mb-4">
+            <h3 class="text-[1rem] font-bold mb-2">
+              Your Business Video <span class="font-normal">(Optional)</span>
+            </h3>
+            <div class="mb-4">
+              <input
+                type="text"
+                id="business-video"
+                placeholder="ex: https://youtu.be/lY2y"
+                class="w-full mt-1 p-2 border border-gray-300 rounded"
+              />
+            </div>
+            <h3 class="text-lg font-bold mb-2">Images</h3>
+            <label
+              for="file"
+              class="flex flex-col items-center justify-center h-52 w-full cursor-pointer border-2 border-dashed border-gray-300 bg-white p-6 rounded-lg shadow-md gap-4 bg-[#f5f5f5]"
+            >
+              <!-- Icon -->
+              <div class="flex items-center justify-center">
+                <i class="fa-solid fa-upload text-gray-500 text-6xl"></i>
+              </div>
+              <!-- Text -->
+              <div class="flex items-center justify-center">
+                <span class="text-gray-600 font-medium"
+                  >Click to upload image</span
+                >
+              </div>
+              <div
+                class="bg-white border-[2px] border-blue-600 text-blue-600 px-2 py-1"
+              >
+                Browse Files
+              </div>
+              <!-- Hidden Input -->
+              <input type="file" id="file" class="hidden" />
+            </label>
+            <h3 class="text-lg font-bold mb-2 mt-4">Upload Featured Image</h3>
+            <label
+              for="file"
+              class="flex flex-col items-center justify-center h-fit w-full cursor-pointer border-2 border-dashed border-gray-300 bg-[#f5f5f5] bg-white p-6 py-10 rounded-lg shadow-md gap-4"
+            >
+              <!-- Text -->
+              <div class="flex items-center gap-x-2">
+                <div
+                  class="bg-white border-[2px] border-blue-600 text-blue-600 px-2 py-1"
+                >
+                  Browse Files
+                </div>
+                <div class="">Choose a file</div>
+              </div>
+
+              <!-- Hidden Input -->
+              <input type="file" id="file" class="hidden" />
+            </label>
+            <h3 class="text-lg font-bold mb-2 mt-4">Upload Business Logo</h3>
+            <label
+              for="file"
+              class="flex flex-col items-center justify-center h-fit w-full cursor-pointer border-2 border-dashed border-gray-300 bg-white p-6 py-10 rounded-lg shadow-md gap-4 bg-[#f5f5f5]"
+            >
+              <!-- Text -->
+              <div class="flex items-center gap-x-2">
+                <div
+                  class="bg-white border-[2px] border-blue-600 text-blue-600 px-2 py-1"
+                >
+                  Browse Files
+                </div>
+                <div class="">Choose a file</div>
+              </div>
+              <!-- Hidden Input -->
+              <input type="file" id="file" class="hidden" />
+            </label>
+          </div>
+          <button
+            class="text-white bg-green-600 hover:bg-green-700 transition-all ease-in-out duration-700 w-full text-center py-2 font-bold rounded-lg"
+          >
+            Save & Preview
+          </button>
         </div>
 
         <!-- Right section (info card) -->
         <div class="w-1/3 ml-6 bg-white p-6 shadow-md rounded-lg h-fit">
-          <h2 class="text-lg font-semibold text-gray-700" id="side-title" >Title</h2>
-          <p class="text-sm text-gray-600 mt-2"  id="side-content">
+          <h2 class="text-lg font-semibold text-gray-700" id="side-title">
+            Title
+          </h2>
+          <p class="text-sm text-gray-600 mt-2" id="side-content">
             Enter your complete business name for when people who know your
             business by name and are looking you up.
           </p>
@@ -592,15 +900,24 @@
           />
         </div>
       </div>
-    </dic>
+    </div>
+
+    <!-- <form action="" method="post">
+      <textarea name="textarea" id="default"  ></textarea>
+      <input type="submit" value="submit">
+  </form>
+  <script src="tinymce/tinymce.min.js"></script>
+  <script src="script.js"></script> -->
     <!-- Footer -->
     <div
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
       id="footer-navs"
     ></div>
-    <div id="footer-last"></div>
-    <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
-      Proudly World Guide by Domain & App Developers
+    <div class="bg-[#363f48] w-full">
+      <div id="footer-last"></div>
+      <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
+        Proudly World Guide by Domain & App Developers
+      </div>
     </div>
 
     <!-- js file for Index JS -->
