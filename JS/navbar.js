@@ -60,6 +60,7 @@ loginBtn.append(userIcon, signInText);
 
 // Add Listing Button
 const addListingBtn = document.createElement("div");
+
 addListingBtn.className =
   "flex items-center gap-x-1 border-2 border-white text-white px-2 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-[#42A7DF] transition-all duration-700";
 const plusIcon = document.createElement("i");
@@ -67,6 +68,10 @@ plusIcon.className = "fas fa-plus text-2xl";
 const addListingText = document.createElement("div");
 addListingText.textContent = "Add Listing";
 addListingBtn.append(plusIcon, addListingText);
+
+addListingBtn.addEventListener("click", function () {
+  window.location.href = "/add-listing.html";
+});
 
 // Append buttons to desktopNav
 desktopNav.append(loginBtn, addListingBtn);

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="indexStyle.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
@@ -21,191 +21,6 @@
       src="https://kit.fontawesome.com/5aff4a9523.js"
       crossorigin="anonymous"
     ></script>
-
-    <style>
-      .MapContainer {
-        position: relative !important;
-        width: 80% !important;
-      }
-
-      .tooltip {
-        position: absolute !important;
-        padding: 5px 10px !important;
-        background-color: black !important;
-        color: white !important;
-        border-radius: 5px !important;
-        font-size: 12px !important;
-        white-space: nowrap !important;
-        pointer-events: none !important;
-        opacity: 0;
-        transition: opacity 0.2s !important;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-      }
-      #map {
-        width: 90vw;
-        max-width: 1000px;
-        height: fit-content;
-        overflow-x: auto;
-      }
-      .selected-country {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #0071a4;
-      }
-      .MapContainer {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .MapContainer svg path {
-        fill: #7798ba;
-        cursor: pointer;
-      }
-
-      .MapContainer svg path:hover {
-        fill: #356ca3;
-      }
-
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-      }
-
-      /* Modal Content/Box */
-      .modal-content {
-        background-color: transparent;
-        /* padding: 20px; */
-        border: none;
-        margin: 15% auto; /* 15% from the top and centered */
-        position: relative;
-        width: 50%; /* Could be more or less, depending on screen size */
-        min-width: 500px;
-      }
-
-      /* The Close Button */
-      .close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        color: #fff;
-
-        font-size: 28px;
-        font-weight: bold;
-      }
-
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-      @media screen and (max-width: 770px) {
-        #button-container {
-          flex-direction: column;
-          bottom: -100% !important;
-        }
-        .header-container {
-          margin-bottom: 600px !important;
-        }
-      }
-      @media screen and (max-width: 1185px) {
-        .contryCard {
-          width: 293.33px !important;
-          max-width: 293.33px !important;
-        }
-      }
-      @media screen and (max-width: 1160px) {
-        .ads-section {
-          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        }
-      }
-
-      @media screen and (max-width: 1000px) {
-        #countryCardsContainer {
-          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-          width: 100% !important;
-        }
-        .contryCard {
-          width: 400px !important;
-          max-width: 400px !important;
-        }
-        .MapContainer {
-          width: 80% !important;
-          margin: 0 auto !important;
-        }
-      }
-      @media screen and (max-width: 900px) {
-        .contryCard {
-          width: 350px !important;
-          max-width: 350px !important;
-        }
-      }
-      @media screen and (max-width: 800px) {
-        .contryCard {
-          width: 300px !important;
-          max-width: 300px !important;
-        }
-        .video-section {
-          flex-direction: column !important;
-          width: 90% !important;
-          .left,
-          .right {
-            width: 100% !important;
-          }
-        }
-      }
-      @media screen and (max-width: 780px) {
-        .ads-section {
-          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-        }
-        .ads-card {
-          width: 90% !important;
-        }
-      }
-      @media screen and (max-width: 700px) {
-        #countryCardsContainer {
-          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-        }
-        .contryCard {
-          width: 90% !important;
-          max-width: 90% !important;
-        }
-      }
-      @media screen and (max-width: 550px) {
-        .nav-btns {
-          flex-direction: column;
-          align-items: center !important;
-          row-gap: 5px;
-        }
-        .header-container {
-          margin-bottom: 700px !important;
-        }
-        .desc-section {
-          width: 90% !important;
-          padding: 0px 0px !important;
-        }
-      }
-    </style>
 
     <title>Home Page</title>
   </head>
@@ -902,26 +717,16 @@
       </div>
     </div>
 
-    <!-- <form action="" method="post">
-      <textarea name="textarea" id="default"  ></textarea>
-      <input type="submit" value="submit">
-  </form>
-  <script src="tinymce/tinymce.min.js"></script>
-  <script src="script.js"></script> -->
     <!-- Footer -->
     <div
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
       id="footer-navs"
     ></div>
-    <div class="bg-[#363f48] w-full">
-      <div id="footer-last"></div>
-      <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
-        Proudly World Guide by Domain & App Developers
-      </div>
-    </div>
+    <script src="JS/footer_bottom.js"></script>
 
     <!-- js file for Index JS -->
     <script src="JS/submit-listing.js"></script>
     <script src="JS/main.js"></script>
+    <script src="JS/LoginBtn.js"></script>
   </body>
 </html>

@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5aff4a9523.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="indexStyle.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
@@ -13,14 +16,87 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <style></style>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/jvectormap@2.0.5/jquery-jvectormap.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5aff4a9523.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Contact Us</title>
   </head>
   <body class="relative">
     <!-- Navbar -->
     <script src="JS/navbar.js"></script>
+    <!-- =============================== -->
+    <!-- Modal (Login) -->
+    <!-- =============================== -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="w-full bg-[#42a7df] flex rounded-t-lg overflow-hidden">
+          <div
+            id="signInTab"
+            class="px-6 py-5 font-bold cursor-pointer bg-[#fff] text-[#42a7df]"
+            onclick="toggleTab('signIn')"
+          >
+            Sign In
+          </div>
+          <div
+            id="signUpTab"
+            class="px-6 py-5 font-bold text-white cursor-pointer"
+            onclick="toggleTab('signUp')"
+          >
+            Sign Up
+          </div>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signInForm" class="bg-white p-8 rounded-b-lg">
+          <div class="flex flex-col gap-y-4">
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <button
+              class="w-full bg-[#42a7df] text-white py-2 rounded hover:bg-[#3590c0]"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signUpForm" class="bg-white p-8 rounded-b-lg hidden">
+          <div class="flex flex-col gap-y-4">
+            <input
+              type="text"
+              placeholder="User Name"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <button
+              class="w-full bg-[#42a7df] text-white py-2 rounded hover:bg-[#3590c0]"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <script src="JS/LoginBtnToggles.js"></script>
+      </div>
+    </div>
     <!-- Blog Header Banner -->
     <script src="JS/bannerImage.js"></script>
     <!-- contact Cards -->
@@ -88,115 +164,8 @@
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
       id="footer-navs"
     ></div>
-    <div id="footer-last"></div>
+    <script src="JS/footer_bottom.js"></script>
+    <script src="JS/LoginBtn.js"></script>
     <script src="JS/main.js"></script>
-
-    <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
-      Proudly World Guide by Domain & App Developers
-    </div>
-    <script>
-      // Blog data
-      blogDataForCards = [
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-        {
-          name: "Lydia Kamau",
-          date: "03/09/2019",
-          title: "Ten fascinating sites to visit in Maldives",
-          bgImg: "./images/bgimg.png",
-          proImg: "./images/prof.jpeg",
-        },
-      ];
-
-      function createCountryCards() {
-        const container = document.getElementById("blogsCardsContainer");
-
-        blogDataForCards.forEach((country) => {
-          // Create card container
-          const card = document.createElement("div");
-          card.className =
-            "max-w-[360px] w-[360px] flex flex-col max-h-[55vh] min-h-[400px] items-center relative rounded-lg shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] relative";
-
-          // Create image element
-          const img = document.createElement("img");
-          img.src = country.bgImg;
-          img.alt = country.name;
-          img.className =
-            "min-h-[200px] h-[200px] w-full object-cover rounded-t-lg";
-
-          const proImg = document.createElement("img");
-          proImg.src = country.proImg;
-          proImg.alt = country.name;
-          proImg.className =
-            "h-[50px] rounded-full w-[50px] object-cover absolute top-[175px] left-1/2 -translate-x-1/2 border-2 border-white";
-
-          // Create type element
-          const typeDiv = document.createElement("div");
-          typeDiv.className = "text-black text-[1rem] font-thin pt-10 pb-1";
-          typeDiv.innerHTML = `blog`;
-          // Create title element
-          const titleDiv = document.createElement("div");
-          titleDiv.className =
-            "text-black text-[1.1rem] font-semibold px-8 text-center";
-          titleDiv.innerHTML = `${country.title}`;
-
-          // Create name element
-          const nameDiv = document.createElement("div");
-          nameDiv.className =
-            "text-black text-[.9rem] font-[200] pt-5 pb-2 flex items-center gap-x-2";
-          nameDiv.innerHTML = `<img src="./images/user.svg" class="w-5 h-5" />${country.name}`;
-
-          // Create date element
-          const dateDiv = document.createElement("div");
-          dateDiv.className =
-            "text-black text-[.9rem] font-[200] pt-5 pb-2 flex items-center gap-x-2";
-          dateDiv.innerHTML = `<img src="./images/calender.svg" class="w-5 h-5" />${country.date}`;
-          // name and date wrapper
-          const nameDateWrapper = document.createElement("div");
-          nameDateWrapper.className =
-            "flex items-center gap-x-8 px-8 justify-between";
-          nameDateWrapper.appendChild(nameDiv);
-          nameDateWrapper.appendChild(dateDiv);
-
-          // Append image and name to card
-          card.appendChild(img);
-          card.appendChild(proImg);
-          card.appendChild(typeDiv);
-          card.appendChild(titleDiv);
-          card.appendChild(nameDateWrapper);
-          // Append card to container
-          container.appendChild(card);
-        });
-      }
-
-      // Call function to create and display cards
-      createCountryCards();
-    </script>
   </body>
 </html>

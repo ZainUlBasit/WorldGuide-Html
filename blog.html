@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="indexStyle.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
@@ -14,51 +13,84 @@
       referrerpolicy="no-referrer"
     />
 
-    <style>
-      @media screen and (max-width: 1195px) {
-        #blogsCardsContainer {
-          grid-template-columns: repeat(2, 1fr);
-          text-align: center;
-        }
-      }
-      @media screen and (max-width: 790px) {
-        #blogsCardsContainer {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-      @media screen and (max-width: 515px) {
-        .footer-links {
-          flex-direction: column;
-        }
-      }
-      @media screen and (max-width: 1242px) {
-        .footer-copyright {
-          flex-direction: column;
-        }
-      }
-      @media screen and (max-width: 520px) {
-        .footer-copyright-links {
-          flex-direction: column;
-        }
-        .footer-copyright {
-          padding-left: 10px !important;
-          padding-right: 10px !important;
-          text-align: center !important;
-        }
-      }
-      @media screen and (max-width: 300px) {
-        .blog-card {
-          max-width: 98% !important;
-          width: 98% !important;
-        }
-      }
-    </style>
-
+    <script
+      src="https://kit.fontawesome.com/5aff4a9523.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./CSS/blog.css" />
     <title>Blog</title>
   </head>
   <body class="relative">
     <!-- Navbar -->
     <script src="JS/navbar.js"></script>
+    <!-- =============================== -->
+    <!-- Modal (Login) -->
+    <!-- =============================== -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="w-full bg-[#42a7df] flex rounded-t-lg overflow-hidden">
+          <div
+            id="signInTab"
+            class="px-6 py-5 font-bold cursor-pointer bg-[#fff] text-[#42a7df]"
+            onclick="toggleTab('signIn')"
+          >
+            Sign In
+          </div>
+          <div
+            id="signUpTab"
+            class="px-6 py-5 font-bold text-white cursor-pointer"
+            onclick="toggleTab('signUp')"
+          >
+            Sign Up
+          </div>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signInForm" class="bg-white p-8 rounded-b-lg">
+          <div class="flex flex-col gap-y-4">
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <button
+              class="w-full bg-[#42a7df] text-white py-2 rounded hover:bg-[#3590c0]"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signUpForm" class="bg-white p-8 rounded-b-lg hidden">
+          <div class="flex flex-col gap-y-4">
+            <input
+              type="text"
+              placeholder="User Name"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full px-4 py-2 border border-gray-300 rounded"
+            />
+            <button
+              class="w-full bg-[#42a7df] text-white py-2 rounded hover:bg-[#3590c0]"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <script src="JS/LoginBtnToggles.js"></script>
+      </div>
+    </div>
     <!-- Blog Header Banner -->
     <script src="JS/bannerImage.js"></script>
     <!-- Blog Cards -->
@@ -219,11 +251,12 @@
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
       id="footer-navs"
     ></div>
-    <div id="footer-last"></div>
+    <script src="JS/footer_bottom.js"></script>
+
+    <script src="JS/LoginBtn.js"></script>
+
     <script src="JS/main.js"></script>
-    <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
-      Proudly World Guide by Domain & App Developers
-    </div>
+
     <script src="JS/Blog.js"></script>
   </body>
 </html>

@@ -96,36 +96,7 @@
           </div>
         </div>
 
-        <script>
-          function toggleTab(tab) {
-            const signInTab = document.getElementById("signInTab");
-            const signUpTab = document.getElementById("signUpTab");
-            const signInForm = document.getElementById("signInForm");
-            const signUpForm = document.getElementById("signUpForm");
-
-            if (tab === "signIn") {
-              signInTab.classList.add("bg-[#fff]");
-              signInTab.classList.remove("!text-[#fff]");
-              signInTab.classList.add("!text-[#42a7df]");
-              signUpTab.classList.remove("!text-[#42a7df]");
-              signUpTab.classList.add("!text-[#fff]");
-              signUpTab.classList.remove("bg-[#fff]");
-
-              signInForm.classList.remove("hidden");
-              signUpForm.classList.add("hidden");
-            } else {
-              signUpTab.classList.add("bg-[#fff]");
-              signInTab.classList.remove("!text-[#42a7df]");
-              signInTab.classList.add("!text-[#fff]");
-              signUpTab.classList.remove("!text-[#fff]");
-              signUpTab.classList.add("!text-[#42a7df]");
-              signInTab.classList.remove("bg-[#fff]");
-
-              signUpForm.classList.remove("hidden");
-              signInForm.classList.add("hidden");
-            }
-          }
-        </script>
+        <script src="JS/LoginBtnToggles.js"></script>
       </div>
     </div>
     <!-- Homer Banner -->
@@ -1540,33 +1511,9 @@
       class="flex items-center justify-center w-full bg-[#363f48] py-12 flex gap-x-5 text-white mt-8"
       id="footer-navs"
     ></div>
-    <div
-      class="flex items-center justify-center w-full bg-[#45505b] pt-12 flex gap-x-3 px-20 text-[lightgray] font-thin text-[1rem]"
-    >
-      <div class="">
-        Copyright © 2006 - 2020 BLUE DIAMOND GLOBAL GROUP Australia Pty Limited
-        (ABN: 62 497 349 953)
-      </div>
-      <div class="flex px-3 gap-x-2">
-        <div class="flex items-center gap-x-2">
-          <div
-            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
-          ></div>
-          2000 Sydney, Australia
-        </div>
-        <div class="flex items-center gap-x-2">
-          <div
-            class="h-[6px] w-[6px] rounded-full border-[1px] border-white bg-white"
-          ></div>
-          Tel 1800 008 555
-        </div>
-      </div>
-    </div>
-    <div class="bg-[#45505b] text-center pb-10 text-[lightgray] font-thin">
-      Proudly World Guide by Domain & App Developers
-    </div>
-
+    <script src="JS/footer_bottom.js"></script>
     <!-- js file for Index JS -->
+    <script src="JS/LoginBtn.js"></script>
     <script src="JS/country_guide.js"></script>
   </body>
 </html>
