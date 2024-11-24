@@ -1,0 +1,11 @@
+@media screen and (max-width: 790px) {
+  .mainCardAboutUs {
+    flex-direction: column !important;
+  }
+  .mainCardLeft {
+    width: 100% !important;
+  }
+  .mainCardRight {
+    width: 100% !important;
+  }
+}

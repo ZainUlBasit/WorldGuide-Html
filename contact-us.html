@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="indexStyle.css" />
+    <link rel="stylesheet" href="CSS/ContactUs.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
@@ -101,8 +102,8 @@
     <script src="JS/bannerImage.js"></script>
     <!-- contact Cards -->
     <div class="w-full flex flex-col justify-center items-center gap-y-5 my-20">
-      <div class="flex justify-between gap-x-8 w-[50%]">
-        <div class="flex flex-col items-start w-1/2 gap-y-2">
+      <div class="flex justify-between gap-x-8 w-[50%] fullNameContact">
+        <div class="flex flex-col items-start w-1/2 gap-y-2" id="firstNameDiv">
           <label for="first-name" class="">
             First Name <span class="text-[red]">*</span>
           </label>
@@ -114,7 +115,7 @@
             placeholder="Your first name here..."
           />
         </div>
-        <div class="flex flex-col items-start w-1/2 gap-y-2">
+        <div class="flex flex-col items-start w-1/2 gap-y-2" id="lastNameDiv">
           <label for="last-name" class="">
             Last Name <span class="text-[red]">*</span>
           </label>
@@ -127,7 +128,7 @@
           />
         </div>
       </div>
-      <div class="flex flex-col items-start w-1/2">
+      <div class="flex flex-col items-start w-1/2" id="emailDiv">
         <label for="email" class="">
           Email <span class="text-[red]">*</span>
         </label>
@@ -139,7 +140,7 @@
           placeholder="Your email here..."
         />
       </div>
-      <div class="flex flex-col items-start w-1/2">
+      <div class="flex flex-col items-start w-1/2" id="CommentDiv">
         <label for="email" class=""
           >Comment or Message <span class="text-[red]">*</span>
         </label>

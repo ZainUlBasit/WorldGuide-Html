@@ -4,6 +4,7 @@ container.classList.add("flex", "flex-col", "w-full");
 
 // Top section
 const topSection = document.createElement("div");
+topSection.id = "topSectionFooter";
 topSection.classList.add(
   "flex",
   "items-center",
@@ -12,7 +13,7 @@ topSection.classList.add(
   "bg-[#45505b]",
   "pt-12",
   "gap-x-3",
-  "px-20",
+  "px-3",
   "text-[lightgray]",
   "font-thin",
   "text-[1rem]"
@@ -20,12 +21,14 @@ topSection.classList.add(
 
 // Add copyright information
 const copyrightDiv = document.createElement("div");
+copyrightDiv.id = "copyrightDiv";
 copyrightDiv.textContent =
   "Copyright © 2006 - 2020 BLUE DIAMOND GLOBAL GROUP Australia Pty Limited (ABN: 62 497 349 953)";
 topSection.appendChild(copyrightDiv);
 
 // Add contact details
 const contactDetails = document.createElement("div");
+contactDetails.id = "contactDetails";
 contactDetails.classList.add("flex", "px-3", "gap-x-2");
 
 // Sydney info
@@ -45,6 +48,7 @@ sydneyDiv.appendChild(sydneyDot);
 
 const sydneyText = document.createElement("div");
 sydneyText.textContent = "2000 Sydney, Australia";
+sydneyText.classList.add("whitespace-nowrap");
 sydneyDiv.appendChild(sydneyText);
 contactDetails.appendChild(sydneyDiv);
 
@@ -65,6 +69,7 @@ telDiv.appendChild(telDot);
 
 const telText = document.createElement("div");
 telText.textContent = "Tel 1800 008 555";
+telText.classList.add("whitespace-nowrap");
 telDiv.appendChild(telText);
 contactDetails.appendChild(telDiv);
 
@@ -77,7 +82,8 @@ bottomSection.classList.add(
   "text-center",
   "pb-10",
   "text-[lightgray]",
-  "font-thin"
+  "font-thin",
+  "px-4"
 );
 bottomSection.textContent = "Proudly World Guide by Domain & App Developers";
 

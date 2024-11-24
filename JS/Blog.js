@@ -43,6 +43,7 @@ function createCountryCards() {
   blogDataForCards.forEach((country) => {
     // Create card container
     const card = document.createElement("div");
+
     card.className =
       "max-w-[360px] w-[360px] flex flex-col max-h-[55vh] min-h-[400px] items-center relative rounded-lg shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] relative blog-card";
 

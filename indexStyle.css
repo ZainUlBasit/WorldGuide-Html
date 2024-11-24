@@ -169,7 +169,7 @@ html {
 @media screen and (max-width: 770px) {
   #button-container {
     flex-direction: column;
-    bottom: -100% !important;
+    top: 550px !important;
   }
   .header-container {
     margin-bottom: 600px !important;
@@ -205,6 +205,13 @@ html {
   .contryCard {
     width: 350px !important;
     max-width: 350px !important;
+  }
+
+  #topSectionFooter {
+    flex-direction: column;
+  }
+  #copyrightDiv {
+    text-align: center;
   }
 }
 @media screen and (max-width: 800px) {
@@ -250,6 +257,27 @@ html {
   .desc-section {
     width: 90% !important;
     padding: 0px 0px !important;
+  }
+  .modal-content {
+    min-width: 95% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  #footer-navs {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 400px) {
+  #contactDetails {
+    flex-direction: column;
+  }
+  #copyrightDiv {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 290px) {
+  #footer-navs {
+    flex-direction: column;
   }
 }
 

@@ -278,6 +278,30 @@ function createCardComponent(ad_info) {
   return card;
 }
 
+// Temp data for ads
+const adsData = [
+  {
+    reviews: 4,
+    map: true,
+    call: true,
+  },
+  {
+    reviews: 3,
+    map: false,
+    call: true,
+  },
+  {
+    reviews: 5,
+    map: true,
+    call: false,
+  },
+  {
+    reviews: 0,
+    map: true,
+    call: true,
+  },
+];
+
 // Append the card to a container in the HTML
 const adsContainer = document.getElementById("main-page-ads"); // Make sure there is a div with id "card-container" in your HTML
 

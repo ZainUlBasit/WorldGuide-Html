@@ -1,0 +1,21 @@
+@media screen and (max-width: 800px) {
+  .fullNameContact {
+    flex-direction: column;
+    width: 100% !important;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  #emailDiv {
+    width: 90% !important;
+  }
+  #lastNameDiv {
+    width: 90% !important;
+  }
+  #firstNameDiv {
+    width: 90% !important;
+  }
+  #CommentDiv {
+    width: 90% !important;
+  }
+}

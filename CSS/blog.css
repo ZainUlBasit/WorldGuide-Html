@@ -9,29 +9,22 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media screen and (max-width: 515px) {
-  .footer-links {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 1242px) {
-  .footer-copyright {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 520px) {
-  .footer-copyright-links {
-    flex-direction: column;
-  }
-  .footer-copyright {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    text-align: center !important;
+
+@media screen and (max-width: 400px) {
+  #Write-Blog {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 @media screen and (max-width: 300px) {
   .blog-card {
     max-width: 98% !important;
     width: 98% !important;
+  }
+  #Write-Blog {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
